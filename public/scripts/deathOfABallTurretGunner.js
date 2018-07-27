@@ -121,8 +121,8 @@ splashScreenSprites.push(poemButton);
 
   //Poem mode sprites.
 var poem = Object.create(spriteObject);
-poem.width = 620;
-poem.height = 480;
+poem.width = document.width || document.body.clientWidth;
+poem.height = document.height || document.body.clientHeight;
 poemSprites.push(poem);
 
 var backButton = Object.create(spriteObject);
@@ -175,8 +175,8 @@ lvl3Background.y = 0;
 levelThreeSprites.push(lvl3Background);
 
 var muzzleFlash = Object.create(spriteObject);
-muzzleFlash.width = 620;
-muzzleFlash.height = 480;
+muzzleFlash.width = document.width || document.body.clientWidth;
+muzzleFlash.height = document.height || document.body.clientHeight;
 muzzleFlash.visible = false;
 levelThreeSprites.push (muzzleFlash);
 
@@ -238,8 +238,8 @@ function makeEnemy()
 
 
 var reticle = Object.create(spriteObject);
-reticle.width = 620;
-reticle.height = 480;
+reticle.width = document.width || document.body.clientWidth;
+reticle.height = document.height || document.body.clientHeight;
 levelThreeSprites.push(reticle);
 
 //used to reset all default values for playing again. 
@@ -1067,7 +1067,7 @@ function render(spritesIn)
 {
   
   var sprites = spritesIn;
-  resizeSprites(sprites); 
+  //resizeSprites(sprites); 
    
   //clear the screen
   drawingSurface.clearRect(0, 0, canvas.width, canvas.height);
