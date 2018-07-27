@@ -57,6 +57,7 @@ function initFullScreenCanvas(canvasId) {
 function resizeCanvas(canvas){
   canvas.width = document.width || document.body.clientWidth;
   canvas.height = document.height || document.body.clientHeight;
+  console.log(canvas.width, canvas.height); 
 }
   
 var canvas = initFullScreenCanvas("canvas");
