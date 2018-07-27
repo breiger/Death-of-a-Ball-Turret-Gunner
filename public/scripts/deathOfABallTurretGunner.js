@@ -45,7 +45,7 @@ mouseY = 0;
 
   
 //Canvas. With fullscreen support? From Pro Android Web Game Apps.   
-function initFullScreenCanvas(canvasId) {
+function initFullScreenCanvas(canvasID) {
   var canvas = document.getElementByID(canvasID);
   resizeCanvas(canvas);
   window.addEventListener("resize", function() {
