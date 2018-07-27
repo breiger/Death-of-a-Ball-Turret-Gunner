@@ -57,7 +57,7 @@ function initFullScreenCanvas(canvasId) {
 function resizeCanvas(canvas){
   canvas.width = document.width || document.body.clientWidth;
   canvas.height = document.height || document.body.clientHeight;
-  resizeSprites(); 
+  resizeSprites(canvas); 
 }
   
 var canvas = initFullScreenCanvas("canvas");
@@ -243,7 +243,7 @@ reticle.width = 620;
 reticle.height = 480;
 levelThreeSprites.push(reticle);
   
-function resizeSprites(){ //hopefully will resize every sprite based on the percentage of difference in the resize. 
+function resizeSprites(canvas){ //hopefully will resize every sprite based on the percentage of difference in the resize. 
   var Hpercentage = Math.abs((480.0 - canvas.height)/100.0);
   var Wpercentage = Math.abs((620.0 - canvas.width)/100.0); 
   for (var i = 0; i === splashScreenSprites.length(); i++)
