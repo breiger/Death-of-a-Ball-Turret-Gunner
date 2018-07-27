@@ -464,6 +464,7 @@ function update() //called by browser, synched with screen refresh rate 30-60fps
 
 function loadHandler()
 {
+  console.log("asset loaded");
   assetsLoaded++;
   if(assetsLoaded === assetsToLoad.length)
   {
