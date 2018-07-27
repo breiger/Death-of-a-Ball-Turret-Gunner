@@ -3,10 +3,10 @@
   //Main game script. Object oriented where appropriate. 
   
 //Boundary checking constants
-R_BOUND = 620;
+R_BOUND = document.width || document.body.clientWidth;
 L_BOUND = 0;
 TOP_BOUND = 0;
-BOTTOM_BOUND = 480;
+BOTTOM_BOUND = document.height || document.body.clientHeight;
 RIGHT = 0;
 LEFT = 1;
 
@@ -57,6 +57,7 @@ function initFullScreenCanvas(canvasId) {
 function resizeCanvas(canvas){
   canvas.width = document.width || document.body.clientWidth;
   canvas.height = document.height || document.body.clientHeight;
+  resizeSprites(); 
 }
   
 var canvas = initFullScreenCanvas("canvas");
@@ -85,8 +86,8 @@ var aCamera = Object.create(camera);
 //Create all the sprites. Remember to consider drawing order.
   //splashScreen mode sprites
 var splashScreenBackground = Object.create(spriteObject);
-splashScreenBackground.width = 620;
-splashScreenBackground.height = 480;
+splashScreenBackground.width = document.width || document.body.clientWidth;
+splashScreenBackground.height = document.height || document.body.clientHeight;
 splashScreenSprites.push(splashScreenBackground);
 
 var turret = Object.create(spriteObject);
@@ -241,6 +242,16 @@ var reticle = Object.create(spriteObject);
 reticle.width = 620;
 reticle.height = 480;
 levelThreeSprites.push(reticle);
+  
+function resizeSprites(){ //hopefully will resize every sprite based on the percentage of difference in the resize. 
+  var Hpercentage = Math.abs((480.0 - canvas.height)/100.0);
+  var Wpercentage = Math.abs((620.0 - canvas.width)/100.0); 
+  for (var i = 0; i === splashScreenSprites.length(); i++)
+     {
+        splashScreenSprites[i].height *= Hpercentage;
+        splashScreenSprites[i].width *= Wpercentage; 
+     }
+}
 
 //used to reset all default values for playing again. 
 function reset()
