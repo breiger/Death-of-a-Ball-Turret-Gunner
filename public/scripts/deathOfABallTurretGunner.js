@@ -1065,7 +1065,7 @@ function render(spritesIn)
 {
   
   var sprites = spritesIn;
-  //resizeSprites(sprites); 
+  resizeSprites(sprites); 
    
   //clear the screen
   drawingSurface.clearRect(0, 0, canvas.width, canvas.height);
