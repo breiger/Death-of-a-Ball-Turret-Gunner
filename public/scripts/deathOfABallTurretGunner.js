@@ -1056,7 +1056,7 @@ function resizeSprites(spritesIn){ //hopefully will resize every sprite based on
   var sprites = spritesIn;
   var Hpercentage = Math.abs((480.0 - canvas.height)/100.0);
   var Wpercentage = Math.abs((620.0 - canvas.width)/100.0); 
-  for (var i = 0; i === sprites.length; i++)
+  for (var i = 0; i < sprites.length; i++)
      {
         sprites[i].height = sprites[i].height - sprites[i].height * Hpercentage;
         sprites[i].width = sprites[i].width - sprites[i].width * Wpercentage; 
