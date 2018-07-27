@@ -1053,13 +1053,11 @@ function drawImageRot(img,x,y,width,height,deg,alpha)
 }
 
 function resizeSprites(spritesIn){ //hopefully will resize every sprite based on the percentage of difference in the resize. 
-  var sprites = spritesIn;
-  var Hpercentage = Math.abs((480.0 - canvas.height)/100.0);
-  var Wpercentage = Math.abs((620.0 - canvas.width)/100.0); 
+  var sprites = spritesIn; 
   for (var i = 0; i < sprites.length; i++)
      {
-        sprites[i].height = sprites[i].height - sprites[i].height * Hpercentage;
-        sprites[i].width = sprites[i].width - sprites[i].width * Wpercentage; 
+        sprites[i].image.height = sprites[i].height;
+        sprites[i].image.width = sprites[i].width; 
      }
 }  
 
