@@ -57,7 +57,6 @@ function initFullScreenCanvas(canvasId) {
 function resizeCanvas(canvas){
   canvas.width = document.width || document.body.clientWidth;
   canvas.height = document.height || document.body.clientHeight;
-  resizeSprites(canvas); 
 }
   
 var canvas = initFullScreenCanvas("canvas");
@@ -242,16 +241,6 @@ var reticle = Object.create(spriteObject);
 reticle.width = 620;
 reticle.height = 480;
 levelThreeSprites.push(reticle);
-  
-function resizeSprites(canvas){ //hopefully will resize every sprite based on the percentage of difference in the resize. 
-  var Hpercentage = Math.abs((480.0 - canvas.height)/100.0);
-  var Wpercentage = Math.abs((620.0 - canvas.width)/100.0); 
-  for (var i = 0; i === splashScreenSprites.length(); i++)
-     {
-        splashScreenSprites[i].height *= Hpercentage;
-        splashScreenSprites[i].width *= Wpercentage; 
-     }
-}
 
 //used to reset all default values for playing again. 
 function reset()
@@ -1063,11 +1052,22 @@ function drawImageRot(img,x,y,width,height,deg,alpha)
   drawingSurface.translate((x + width / 2) * (-1), (y + height / 2) * (-1));
 }
 
+function resizeSprites(spritesIn){ //hopefully will resize every sprite based on the percentage of difference in the resize. 
+  var sprites = spritesIn;
+  var Hpercentage = Math.abs((480.0 - canvas.height)/100.0);
+  var Wpercentage = Math.abs((620.0 - canvas.width)/100.0); 
+  for (var i = 0; i === sprites.length(); i++)
+     {
+        sprites[i].height = sprites[i].height - sprites[i].height * Hpercentage;
+        sprites[i].width = sprites[i].width - sprites[i].width * Wpercentage; 
+     }
+}  
 
 function render(spritesIn)
 {
   
   var sprites = spritesIn;
+  resizeSprites(sprites); 
    
   //clear the screen
   drawingSurface.clearRect(0, 0, canvas.width, canvas.height);
