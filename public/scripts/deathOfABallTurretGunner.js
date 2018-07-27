@@ -43,12 +43,27 @@ var playerLife = 100;
 mouseX = 0;
 mouseY = 0;
 
-//canvas
-var canvas = document.getElementById("canvas");
+  
+//Canvas. With fullscreen support? From Pro Android Web Game Apps.   
+function initFullScreenCanvas(canvasId) {
+  var canvas = document.getElementByID(canvasID);
+  resizeCanvas(canvas);
+  window.addEventListener("resize", function() {
+    resizeCanvas(canvas);
+  });
+  return canvas; 
+}  
+
+function resizeCanvas(canvas){
+  canvas.width = document.width || document.body.clientWidth;
+  canvas.height = document.height || document.body.clientHeight;
+}
+  
+var canvas = initFullScreenCanvas("canvas");
 canvas.addEventListener("mousemove", mouseMoveHandler, false);
 canvas.addEventListener("mousedown", mouseDownHandler, false);
 canvas.addEventListener("mouseup", mouseUpHandler, false);
-
+ 
 //Create the drawing surface
 var drawingSurface = canvas.getContext("2d");
 
