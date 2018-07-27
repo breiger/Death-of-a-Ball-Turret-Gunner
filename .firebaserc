@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "staging": "death-of-a-turret-gunner"
+  }
+}
