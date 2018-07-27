@@ -260,151 +260,151 @@ function reset()
 //Load the image assets. TODO consider a sprite sheet for each mode or level. 
 var ssBackgroundImage = new Image();
 ssBackgroundImage.addEventListener("load", loadHandler, false);
-ssBackgroundImage.src = "images/background.jpg" //TODO change to PNG.
+ssBackgroundImage.src = "Images/background.jpg" //TODO change to PNG.
 assetsToLoad.push(ssBackgroundImage);
 splashScreenBackground.image = ssBackgroundImage;
 
 var turretImage = new Image();
 turretImage.addEventListener("load", loadHandler, false);
-turretImage.src = "images/turret.png";
+turretImage.src = "Images/turret.png";
 assetsToLoad.push(turretImage);
 turret.image = turretImage;
 
 var titleImage = new Image();
 titleImage.addEventListener("load", loadHandler, false);
-titleImage.src = "images/title.png";
+titleImage.src = "Images/title.png";
 assetsToLoad.push(titleImage);
 title.image = titleImage;
 
 var plyBtnImg = new Image();
 plyBtnImg.addEventListener("load", loadHandler, false);
-plyBtnImg.src = "images/playButton.png";
+plyBtnImg.src = "Images/playButton.png";
 assetsToLoad.push(plyBtnImg);
 playButton.image = plyBtnImg;
 
 var pmBtnImg = new Image();
 pmBtnImg.addEventListener("load", loadHandler, false);
-pmBtnImg.src = "images/poemButton.png";
+pmBtnImg.src = "Images/poemButton.png";
 assetsToLoad.push(pmBtnImg);
 poemButton.image = pmBtnImg;
 
 var btnPshdPlyImg = new Image();
 btnPshdPlyImg.addEventListener("load", loadHandler, false);
-btnPshdPlyImg.src = "images/depPlayButton.png";
+btnPshdPlyImg.src = "Images/depPlayButton.png";
 assetsToLoad.push(btnPshdPlyImg);
 
 var btnPshdPmImg = new Image();
 btnPshdPmImg.addEventListener("load", loadHandler, false);
-btnPshdPmImg.src = "images/depPoemButton.png";
+btnPshdPmImg.src = "Images/depPoemButton.png";
 assetsToLoad.push(btnPshdPmImg);
 
 var poemImage = new Image();
 poemImage.addEventListener("load", loadHandler, false);
-poemImage.src = "images/poem.png";
+poemImage.src = "Images/poem.png";
 assetsToLoad.push(poemImage);
 poem.image = poemImage;
 
 var backBtnImg = new Image();
 backBtnImg.addEventListener("load", loadHandler, false);
-backBtnImg.src = "images/backButton.png";
+backBtnImg.src = "Images/backButton.png";
 assetsToLoad.push(backBtnImg);
 backButton.image = backBtnImg;
 
 var btnPshdBckImg = new Image();
 btnPshdBckImg.addEventListener("load", loadHandler, false);
-btnPshdBckImg.src = "images/depBackButton.png";
+btnPshdBckImg.src = "Images/depBackButton.png";
 assetsToLoad.push(btnPshdBckImg);
 
 var fallBtnImg = new Image();
 fallBtnImg.addEventListener("load", loadHandler, false);
-fallBtnImg.src = "images/fallButton.png";
+fallBtnImg.src = "Images/fallButton.png";
 assetsToLoad.push(fallBtnImg);
 fallButton.image = fallBtnImg;
 
 var btnPshdFlImg = new Image();
 btnPshdFlImg.addEventListener("load", loadHandler, false);
-btnPshdFlImg.src = "images/depFallButton.png";
+btnPshdFlImg.src = "Images/depFallButton.png";
 assetsToLoad.push(btnPshdFlImg);
 
 var lvl2BGImg = new Image();
 lvl2BGImg.addEventListener("load", loadHandler, false);
-lvl2BGImg.src = "images/lvl2BG.png"
+lvl2BGImg.src = "Images/lvl2BG.png"
 assetsToLoad.push(lvl2BGImg);
 lvl2BG.image = lvl2BGImg;
 
 var turretGunnerImg = new Image();
 turretGunnerImg.addEventListener("load", loadHandler, false);
-turretGunnerImg.src = "images/turretResized.png";
+turretGunnerImg.src = "Images/turretResized.png";
 assetsToLoad.push(turretGunnerImg);
 turretGunner.image = turretGunnerImg;
 
 var fetusImg = new Image();
 fetusImg.addEventListener("load", loadHandler, false);
-fetusImg.src = "images/womb.png";
+fetusImg.src = "Images/womb.png";
 assetsToLoad.push(fetusImg);
 
 var dogFetusImg = new Image();
 dogFetusImg.addEventListener("load", loadHandler, false);
-dogFetusImg.src = "images/animalWomb.jpg";
+dogFetusImg.src = "Images/animalWomb.jpg";
 assetsToLoad.push(dogFetusImg);
 
 var hunchButtonImg = new Image();
 hunchButtonImg.addEventListener("load", loadHandler, false);
-hunchButtonImg.src = "images/hunchButton.png";
+hunchButtonImg.src = "Images/hunchButton.png";
 assetsToLoad.push(hunchButtonImg);
 hunchButton.image = hunchButtonImg;
 
 var depHunchButtonImg = new Image();
 depHunchButtonImg.addEventListener("load", loadHandler, false);
-depHunchButtonImg.src = "images/depHunchButton.png";
+depHunchButtonImg.src = "Images/depHunchButton.png";
 assetsToLoad.push(depHunchButtonImg);
 
 var lvl3BackgroundImg = new Image();
 lvl3BackgroundImg.addEventListener("load", loadHandler, false);
-lvl3BackgroundImg.src = "images/mainBackground.png";
+lvl3BackgroundImg.src = "Images/mainBackground.png";
 assetsToLoad.push(lvl3BackgroundImg);
 lvl3Background.image = lvl3BackgroundImg;
 
 var reticleImg = new Image();
 reticleImg.addEventListener("load", loadHandler, false);
-reticleImg.src = "images/innerTurret.png";
+reticleImg.src = "Images/innerTurret.png";
 assetsToLoad.push(reticleImg);
 reticle.image = reticleImg;
 
 var muzzleFlashImg = new Image();
 muzzleFlashImg.addEventListener("load", loadHandler, false);
-muzzleFlashImg.src = "images/muzzleFlash.png";
+muzzleFlashImg.src = "Images/muzzleFlash.png";
 assetsToLoad.push(muzzleFlashImg);
 muzzleFlash.image = muzzleFlashImg;
 
 var leftBulletImg = new Image();
 leftBulletImg.addEventListener("load", loadHandler, false);
-leftBulletImg.src = "images/leftBullet.png";
+leftBulletImg.src = "Images/leftBullet.png";
 assetsToLoad.push(leftBulletImg);
 
 var rightBulletImg = new Image();
 rightBulletImg.addEventListener("load", loadHandler, false);
-rightBulletImg.src = "images/rightBullet.png";
+rightBulletImg.src = "Images/rightBullet.png";
 assetsToLoad.push(rightBulletImg);
 
 var planeRightImg = new Image();
 planeRightImg.addEventListener("load", loadHandler, false);
-planeRightImg.src = "images/planeRight.png";
+planeRightImg.src = "Images/planeRight.png";
 assetsToLoad.push(planeRightImg);
 
 var nightmareFighter1 = new Image();
 nightmareFighter1.addEventListener("load", loadHandler, false);
-nightmareFighter1.src = "images/nightmareFighter1.png";
+nightmareFighter1.src = "Images/nightmareFighter1.png";
 assetsToLoad.push(nightmareFighter1);
 
 var nightmareFighter2 = new Image();
 nightmareFighter2.addEventListener("load", loadHandler, false);
-nightmareFighter2.src = "images/nightmareFighter2.png";
+nightmareFighter2.src = "Images/nightmareFighter2.png";
 assetsToLoad.push(nightmareFighter1);
 
 var nightmareFighter3 = new Image();
 nightmareFighter3.addEventListener("load", loadHandler, false);
-nightmareFighter3.src = "images/nightmareFighter3.png";
+nightmareFighter3.src = "Images/nightmareFighter3.png";
 assetsToLoad.push(nightmareFighter3);
 
 
